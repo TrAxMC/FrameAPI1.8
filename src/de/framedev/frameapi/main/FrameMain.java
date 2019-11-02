@@ -9,6 +9,8 @@ import de.framedev.frameapi.api.Money;
 import de.framedev.frameapi.kits.GetKits;
 import de.framedev.frameapi.listeners.JoinListener;
 import de.framedev.frameapi.listeners.LeaveListener;
+import de.framedev.frameapi.materials.InventoryManager;
+import de.framedev.frameapi.materials.ItemBuilder;
 import de.framedev.frameapi.money.GetMoneyInTime;
 import de.framedev.frameapi.money.MoneyBankSigns;
 import de.framedev.frameapi.money.MoneySigns;
@@ -18,18 +20,16 @@ import de.framedev.frameapi.pets.Pets;
 import de.framedev.frameapi.utils.Config;
 import de.framedev.frameapi.utils.Lags;
 import de.framedev.frameapi.warps.WarpSigns;
-import net.minecraft.server.v1_8_R3.IChatBaseComponent;
-import net.minecraft.server.v1_8_R3.PacketPlayOutPlayerListHeaderFooter;
 import org.bukkit.Bukkit;
 import org.bukkit.ChatColor;
 import org.bukkit.OfflinePlayer;
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandSender;
-import org.bukkit.craftbukkit.v1_8_R3.entity.CraftPlayer;
 import org.bukkit.entity.Player;
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;
 import org.bukkit.event.player.AsyncPlayerChatEvent;
+import org.bukkit.inventory.Inventory;
 import org.bukkit.plugin.PluginManager;
 import org.bukkit.plugin.java.JavaPlugin;
 import org.bukkit.scheduler.BukkitRunnable;
@@ -157,6 +157,13 @@ public class FrameMain extends JavaPlugin implements Listener {
 	public static FrameMain getInstance() {
 		return mi;
 		
+	}
+	public static InventoryManager im = new InventoryManager();
+	private static Inventory CreateInventory(String name, int size) {
+		im.setName(name);
+		im.setSize(size);
+		im.build();
+		return im.getInventory();
 	}
 	ArrayList<Integer> lol = new ArrayList<Integer>();
 	public ArrayList<Integer> getPlayerMoneys() throws SQLException {
@@ -395,6 +402,9 @@ public class FrameMain extends JavaPlugin implements Listener {
                                     sender.sendMessage(ChatColor.DARK_RED+"TPS : " + TpsFormat.format(TPS));
                                     return true;
                             }
+                            Player player = (Player) sender;
+                            Inventory inv = CreateInventory("Test",3);
+                            player.openInventory(inv);
                            
                     }
             }

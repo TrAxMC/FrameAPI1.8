@@ -11,6 +11,7 @@ import java.util.Arrays;
 public class ItemBuilder {
     private ItemStack item;
     private ItemMeta itemMeta;
+    private Material material;
 
     @SuppressWarnings("deprecation")
     public ItemBuilder(Material material, short subID) {
