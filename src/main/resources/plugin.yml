@@ -1,0 +1,189 @@
+name: FrameAPI
+author: FrameDev
+version: 4.3.0
+api-version: 1.14
+description: FrameAPI this API add much things to your Minecraft!
+main: de.framedev.frameapi.main.Main
+commands:
+  frameapi:
+    description: each Commands
+  lootchest:
+  health:
+  gm:
+  loader:
+  back:
+    description: Teleport to the DeathLocation when enabled
+  spawnmob:
+    description: Spawns a Mob
+  denied:
+    description: Set a Denied word in Config if this word was writing the Player will bi kicked
+  getitem:
+    description: Gives you an Item with ItemLore and displayname and Unbreakable
+  heal:
+    description: heal player
+  getenergy:
+  getmysql:
+  pos:
+  cleartps:
+  teleporter:
+    description: Open the Teleporter Inventory
+  addentity:
+  set:
+    description: set the Money from the Player
+    usage: 
+      /set [player] [amount]
+  balance:
+    aliases: [bal]
+    description: shows your money
+  pay:
+    description: use to give a Player Money
+  setwarp:
+    description: set a Warp point
+  removewarp:
+    description: remove a Warp point
+  warp:
+    description: teleport to an Warp point
+  playerlistadd:
+  mute:
+  kits:
+  tps:
+    description: Show you the TPS
+  deposit:
+    description: Deposit Money in your Bank Account
+  withdraw:
+    description: getMoney from Bank
+  transfer:
+    description: Transfer Money to Player
+  bankbalance:
+    description: Show Bank Money
+  setbank:
+    description: setbank Money
+  msg:
+    description: write a message to Player
+  createpay:
+    description: Create a Bill
+  paythebill:
+    description: Pay the Bill
+  god:
+    description: enable or disable GodMode
+  sethealth:
+  ultrahardcore:
+  adminenergy:
+  addenergy:
+permissions:
+   frameapi.*:
+     description: Gives access to all FrameAPI commands
+     children:
+       frameapi.config: true
+       frameapi.startbudget: true
+       frameapi.teleporter: true
+       frameapi.backtp: true
+       frameapi.spawnmob: true
+       frameapi.denied: true
+       frameapi.getitem: true
+       frameapi.mysql: true
+       frameapi.setwarp: true
+       frameapi.warp: true
+       frameapi.removewarp: true
+       frameapi.balance: true
+       frameapi.set: true
+       frameapi.signs: true
+       frameapi.heal: true
+       frameapi.bankbalance: true
+       frameapi.setbank: true
+       frameapi.transfer: true
+       frameapi.withdraw: true
+       frameapi.deposit: true
+       frameapi.tps: true
+       frameapi.msg: true
+       frameapi.help: true
+       frameapi.update: true
+       frameapi.energy: true
+       frameapi.chunkloader: true
+   frameapi.startbudget:
+     description: Allows you to use StartBudget Command
+     default: op
+   frameapi.teleporter:
+     description: Allows you to use Teleporter Inventory
+     default: op
+   frameapi.backtp:
+     description: Allows you to use back teleport
+     default: op
+   frameapi.spawnmob:
+     description: Allows you to use Spawn Mob
+     default: op
+   frameapi.denied:
+     description: Allows you to use Denied Cmd
+     default: op
+   frameapi.getitem:
+     description: Allows you to use GetItem CMD
+     default: op
+   frameapi.heal:
+     description: Allows you to use Heal CMD
+     default: op
+   frameapi.mysql:
+     description: Allow you to use Mysql Help CMD
+   frameapi.setwarp:
+     default: op
+     description: Allow you to set a Warp Point
+   frameapi.warp:
+     default: op
+     description: allow you to Teleport ya
+   frameapi.balance:
+     default: op
+     description: allow you to show our Money
+     children:
+       frameapi.balance.other: true
+   frameapi.balance.other:
+     default: op
+     description: allow you to show another Players Money
+   frameapi.set:
+     default: op
+     description: allow you to set the Money from a Player
+     children:
+       frameapi.set.other: true
+   frameapi.set.other:
+     default: op
+   frameapi.signs:
+     default: op
+     children:
+       frameapi.signs.use: true
+       frameapi.signs.create: true
+   frameapi.signs.use:
+     default: op
+   frameapi.signs.create:
+     default: op
+   frameapi.config:
+     default: op
+   frameapi.help:
+     default: op
+   frameapi.removewarp:
+     default: op
+   frameapi.bankbalance:
+     default: op
+     children:
+       frameapi.bankbalance.other: true
+   frameapi.bankbalance.other:
+     default: op
+   frameapi.setbank:
+     default: op
+     children:
+       frameapi.setbank.other: true
+   frameapi.setbank.other:
+     default: op
+   frameapi.transfer:
+     default: op
+   frameapi.withdraw:
+     default: op
+   frameapi.deposit:
+     default: op
+   frameapi.tps:
+     default: op
+   frameapi.update:
+     default: op
+   frameapi.msg:
+     default: op
+   frameapi.energy:
+     default: op
+   frameapi.chunkloader:
+     default: op

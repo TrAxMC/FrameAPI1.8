@@ -1,0 +1,129 @@
+##This Config.yml is in use by FrameAPI
+##Pls don't change things you don't now what thit it!
+##Copyrighted By FrameDev
+##Have fun and dont make Config.yml Broken :D
+
+#===============================
+#=          FrameDev           =
+#===============================
+
+##Use MYSQL
+MYSQL:
+  Host: ' '
+  User: ' '
+  Password: ' '
+  Database: ' '
+  Port: '3306'
+  Boolean: false
+Items:
+  - 20,10
+##Get the Boolean for first Join Money
+StartMoney: false
+
+##Change the Money on first Join
+StartBudget: 1000
+
+##Change the Text when the Plugin is loading
+##Would you like to have the Message when yes true else false :D
+MessageOfReload:
+  Text: '&aHello &b[Player]'
+  Boolean: false
+
+##Every Night change it to day false = natural Day-Night circle
+NoNight: false
+
+##The First Money.Time is wich TimeStamp you get you'r Money the second/ Amount is your Amount to get the Money
+##Boolean is would you like to get the Money?
+##20 = 1 Sec
+##Use this for the Time when you earn the Money from The FrameAPI
+##cmds == Money Commands to get Money or show Money!
+##MSG == Are the messages for the Money Commands!
+Money:
+  Time: 1200
+  Amount: 100
+  Boolean: false
+  CMDS: false
+  MSG:
+    Balance: '&aYour money is &b[Money]'
+    Pay: '&aYou gave &b[Target] &b[Money]'
+    Set: '&aYour money has been set to &b[Money]'
+MoneyBalance:
+  Other:
+    MSG: '&aThe money from &b[Target] &ais &b[Money]'
+MoneySet:
+  Other: 
+    MSG: '&aThe money from &b[Target] &ahas been set to &b[Money]'
+##Would like you to use the Teleporter Invenotry?
+Teleporter:
+  Inventory: false
+  
+##Set Time in World
+##With the Methode setTimeMessage
+SetTime:
+  Message: false
+  Text: '&aTime set to &b[Time]'
+
+##Teleport to old Location can be disable
+OldLoc:
+  Teleport: false
+
+##MoneySigns can be Deactivated or Activated
+MoneySigns: false
+
+##MoneySigns Text Can be Changed
+MoneySign:
+  Balance: '&b[Bank Balance]'
+  Buy: '&aBuy'
+  Sell: '&aSell'
+  Free: '&aFree'
+
+##Use Denied Words in Chat with /denied add or / denied remove 
+Chat:
+  Denied: false
+  
+
+##Would you like to use /setwarp or /warp?
+##/setwarp (warpname) / warp (warpname)
+Use:
+  Warps: false
+
+##Your MOTD, Server Name in Server Browser
+Motd:
+  Name: '&bFrameAPIMOTD Change this in &cConfig.yml'
+  Boolean: false
+
+# Prefix Change
+Prefix: '&a[&aFrameAPI]&f'
+#No Permission Text Don't use (')
+NoPerm: '&cYou don"t have access to this Command'
+
+# Would you have an Different JoinMessage or not in Messages.yml can you change the Text
+Join:
+  Message:
+    Boolean: true
+    
+# Would you have an Different QuitMessage or not in Messages.yml can you change the Text
+
+Leave:
+  Message:
+    Boolean: true
+    
+# Get Money for OfflinePlayers doesn't works without MYSQL !!!
+OfflinePlayers:
+  Money:
+    Boolean: false
+    Amount: 25
+    Time: 300
+    
+# With this you can Set a custom TabList Header
+Tablist:
+  Header: 'FrameAPI'
+  Footer: ' '
+  Boolean: true
+  
+# Rightclick to a Player to set it as Passenger to you
+SetPlayerPassenger: false
+
+
+# Set the Language Only en_EN or de_DE // en_EN = english de_DE = german
+language: 'en_EN'

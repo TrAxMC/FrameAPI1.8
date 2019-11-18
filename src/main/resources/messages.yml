@@ -1,0 +1,35 @@
+# Other Messages
+
+message:
+  TeleportBack: '&aYou has been Teleportet to your &cDeathLocation'
+  NoLocation: '&4No Location found!'
+  targetheal: '&aYou have been healed by &b[player]'
+  targethealplayer: '&aYou have been Healed &b[target]'
+  heal: '&aYou have been Healed'
+  notenabledback: '&c/back is not enabled in Config.yml'
+  notactivated: '&cthis Command is not Activated'
+Startbudget:
+  Text:
+    Set: '&bStartBudget Sucessfuly set to [Money]'
+
+# Warp Messages
+Warp:
+  Warp: '&aYou were teleported to &b[warp]'
+  warpremoved: '&a[Prefix] &a[Warpname]&c was Removed!'
+  warpdoesntexist: '&4Doesnt Exists or was &cRemoved!'
+# PayLoad Text and True or False
+Payload:
+  Text: '&aYou got your reward &b[Money]'
+  Boolean: true
+  
+# Change the Join Message
+JoinMessage: '&bWelcome &a[Player]'
+
+# Change the Leave Message
+LeaveMessage: '&bGoodbye &a[Player]'
+
+# Use to create a bill only works with MYSQL
+Bill:
+  Create: '&aYou have now put a bill to &b[Target]'
+  Get: '&aYou got an invoice from &b[Target] &aamounting to &b[Amount]'
+  Pay: '&bYou payed the Bill from &a[Target] &bin Amount of &a[Amount]'
